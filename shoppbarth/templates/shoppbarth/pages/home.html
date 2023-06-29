@@ -1,24 +1,12 @@
-{% include 'shoppbarth/partials/head.html' %}
+{% extends 'global/base.html' %} 
 
-<body>
-    {% include 'shoppbarth/partials/header.html' %}
+{% block title %}Home |{% endblock title %}
 
-    {% include 'shoppbarth/partials/search.html'%}
-
-    <main class="main-content-container">
-        <div class="main-content main-content-list container">
-            {% include 'shoppbarth/partials/product.html' %}
-            {% include 'shoppbarth/partials/product.html' %}
-            {% include 'shoppbarth/partials/product.html' %}
-            {% include 'shoppbarth/partials/product.html' %}
-            {% include 'shoppbarth/partials/product.html' %}
-            {% include 'shoppbarth/partials/product.html' %}
-            
-        </div>
-    </main>
-
-    {% include 'shoppbarth/partials/footer.html' %}
-
-</body>
-
-</html>
+{% block content %}
+   <div class="main-content main-content-list container">
+        {% for product in products  %}
+            {% include 'shoppbarth/partials/product.html' %}        
+        {% endfor %}
+        
+    </div>
+{% endblock content %}

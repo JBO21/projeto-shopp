@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    {% include 'shoppbarth/partials/head.html' %}
+    <title> {% block title %}{% endblock title %} Shopp Barth</title>
+</head>
+
+<body>
+    {% include 'shoppbarth/partials/header.html' %}
+
+    {% include 'shoppbarth/partials/search.html'%}
+
+    <main class="main-content-container">
+        {% block content %}{% endblock content %}
+
+    </main>
+
+    {% include 'shoppbarth/partials/footer.html' %}
+
+</body>
+
+</html>

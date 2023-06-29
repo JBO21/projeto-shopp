@@ -3,12 +3,20 @@
         <img src="https://placehold.co/1280x720/lightgreen/white.png" alt="Temporario">
     </div>
     <div class="product-title-container">
-        <h2 class="product-title">Lorem ipsum dolor sit amet.</h2>
+        <h2 class="product-title"> {{product.title}}</h2>
+    </div>
+
+    <div class='product-categoy'>
+        <a href="/shoppbarth/category/tecnology/">
+            <i class="fas fa-layer-group"></i>
+            <span>{{product.category.name}}</span>
+        </a>
     </div>
     
     <div class="product-content">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae quisquam dolorum assumenda earum exercitationem veniam ad accusantium quae explicabo quaerat atque optio, officiis, aliquid expedita libero est labore consectetur minus?</p>
+        <p>{{product.description}}</p>
     </div>
+    
     <footer class="product-footer">
         <a href="/product/3/" class="product-read-more button button-dark button-full-width">
             <i class="fa-solid fa-eye"></i>
